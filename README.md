@@ -1,4 +1,4 @@
-# GroceryApp  :pineapple:  :cherries:  :corn:
+# GroceryApp  :pineapple:  :cherries:  :corn:    <image src="https://user-images.githubusercontent.com/58719230/84263662-8327cd80-ab3d-11ea-909d-f50ff7c26269.png">
 Online Grocery Shopping App built using Flutter
 
 ## Flutter

@@ -1,4 +1,7 @@
-# GroceryApp  :pineapple:  :cherries:  :corn:   <image src="https://user-images.githubusercontent.com/58719230/84263920-faf5f800-ab3d-11ea-924d-a1c8f3a8bae7.png" width="150" height="25"> <image src="https://user-images.githubusercontent.com/58719230/84273719-a443ea80-ab4c-11ea-956e-78b2c61a8f16.png" width="115" height="25"> <image src="https://user-images.githubusercontent.com/58719230/84273140-f0daf600-ab4b-11ea-8715-33a6a63d27df.png" width="150" height="25">
+# GroceryApp  :pineapple:  :cherries:  :corn: 
+<image src="https://user-images.githubusercontent.com/58719230/84263920-faf5f800-ab3d-11ea-924d-a1c8f3a8bae7.png" width="150" height="25"> <image src="https://user-images.githubusercontent.com/58719230/84273719-a443ea80-ab4c-11ea-956e-78b2c61a8f16.png" width="115" height="25"> <image src="https://user-images.githubusercontent.com/58719230/84273140-f0daf600-ab4b-11ea-8715-33a6a63d27df.png" width="150" height="25">
+
+
 Online Grocery Shopping App built using Flutter
 
 ## Flutter

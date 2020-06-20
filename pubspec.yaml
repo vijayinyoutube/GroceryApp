@@ -25,6 +25,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   gradient_text: ^1.0.2
   carousel_slider: ^2.0.0
+  
 
 dev_dependencies:
   flutter_test:
@@ -38,6 +39,7 @@ dev_dependencies:
 flutter:
   assets:
     - assets/Card_horizontal/
+    - assets/Card_Vertical/
     - assets/Carousel_images/
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

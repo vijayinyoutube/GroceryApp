@@ -17,7 +17,7 @@ Check out the video tutorial for this app
 
 >Part-1: https://youtu.be/mg5zZN4RXU8  :watermelon:
 
->Part-1: https://youtu.be/T3mMXOW2UlI  :watermelon:
+>Part-2: https://youtu.be/T3mMXOW2UlI  :watermelon:
 
 
 Visit my Channel for more : :point_right: [vijaycreations](https://www.youtube.com/channel/UCBC_Z7jla1GSITcqLKAtPxQ)

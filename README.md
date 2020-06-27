@@ -20,4 +20,4 @@ Check out the video tutorial for this app
 
 Visit my Channel for more : :point_right: [vijaycreations](https://www.youtube.com/channel/UCBC_Z7jla1GSITcqLKAtPxQ)
 
-<image src="https://user-images.githubusercontent.com/58719230/83388190-a64ed080-a40b-11ea-91f6-d4c23e49f8c5.png" width="300" height="450"> <image src="https://user-images.githubusercontent.com/58719230/83388210-aea70b80-a40b-11ea-86b9-3a44ddb9fd5b.png" width="300" height="450"><image src="https://user-images.githubusercontent.com/58719230/83389079-38a3a400-a40d-11ea-8c0a-ae28f2a867ea.gif" width="300" height="450"> 
+<image src="https://user-images.githubusercontent.com/58719230/83389079-38a3a400-a40d-11ea-8c0a-ae28f2a867ea.gif" width="300" height="450"> <image src="https://user-images.githubusercontent.com/58719230/85201765-93029700-b31f-11ea-99db-a937e179e4c5.png" width="300" height="450"> 

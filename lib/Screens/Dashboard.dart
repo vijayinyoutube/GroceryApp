@@ -36,7 +36,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Search Item",
+                    " Search Item ",
                     style: TextStyle(color: Colors.white, fontSize: 17),
                   ),
                   Icon(
@@ -50,7 +50,7 @@ class _DashboardPageState extends State<DashboardPage> {
               Icons.shopping_basket,
               size: 25,
               color: Colors.deepOrangeAccent,
-            )
+            ),
           ],
         ),
       ),

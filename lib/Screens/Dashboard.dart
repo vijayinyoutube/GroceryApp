@@ -4,11 +4,14 @@ import 'package:youtube/Declarations/Colors/borderColors.dart';
 import 'package:youtube/Declarations/Colors/cardColors.dart';
 import 'package:youtube/Declarations/Images.dart';
 import 'package:youtube/Declarations/Offers.dart';
+import 'package:youtube/Screens/info.dart';
 
 class DashboardPage extends StatefulWidget {
   @override
   _DashboardPageState createState() => _DashboardPageState();
 }
+
+var page = 0;
 
 class _DashboardPageState extends State<DashboardPage> {
   @override
@@ -223,133 +226,149 @@ class _DashboardPageState extends State<DashboardPage> {
                 height: 10,
               ),
               SingleChildScrollView(
-                child: Container(
-                  height: MediaQuery.of(context).size.height * 0.45,
-                  child: Expanded(
-                    child: ListView.builder(
-                      itemCount: horizontalCardImages.length,
-                      itemBuilder: (context, index) {
-                        return Row(
-                          children: [
-                            Container(
-                              width:
-                                  (MediaQuery.of(context).size.width - 25) / 2,
-                              height: 100,
-                              child: Card(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(7.5),
-                                  side: BorderSide(
-                                    color: bordercolorsleft[index],
-                                    width: 2,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => InformationPage(
+                          itemSelected: page.toString(),
+                        ),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    height: MediaQuery.of(context).size.height * 0.45,
+                    child: Expanded(
+                      child: ListView.builder(
+                        itemCount: horizontalCardImages.length,
+                        itemBuilder: (context, index) {
+                          page = index;
+
+                          return Row(
+                            children: [
+                              Container(
+                                width:
+                                    (MediaQuery.of(context).size.width - 25) /
+                                        2,
+                                height: 100,
+                                child: Card(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(7.5),
+                                    side: BorderSide(
+                                      color: bordercolorsleft[index],
+                                      width: 2,
+                                    ),
+                                  ),
+                                  color: cardcolorsleft[index],
+                                  elevation: 5,
+                                  child: Column(
+                                    children: [
+                                      SizedBox(
+                                        height: 2,
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          SizedBox(
+                                            width: 10,
+                                          ),
+                                          Flexible(
+                                            child: Text(
+                                              itemnameleft[index],
+                                              style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 16,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                          ),
+                                          Icon(
+                                            Icons.navigate_next,
+                                            size: 27,
+                                            color: bordercolorsleft[index],
+                                          ),
+                                        ],
+                                      ),
+                                      Flexible(
+                                        child: Image.asset(
+                                          verticalCardImagesleft[index],
+                                          fit: BoxFit.cover,
+                                          width: ((MediaQuery.of(context)
+                                                          .size
+                                                          .width -
+                                                      25) /
+                                                  2) -
+                                              25,
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
-                                color: cardcolorsleft[index],
-                                elevation: 5,
-                                child: Column(
-                                  children: [
-                                    SizedBox(
-                                      height: 2,
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        SizedBox(
-                                          width: 10,
-                                        ),
-                                        Flexible(
-                                          child: Text(
-                                            itemnameleft[index],
-                                            style: TextStyle(
-                                                color: Colors.black,
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.bold),
-                                          ),
-                                        ),
-                                        Icon(
-                                          Icons.navigate_next,
-                                          size: 27,
-                                          color: bordercolorsleft[index],
-                                        ),
-                                      ],
-                                    ),
-                                    Flexible(
-                                      child: Image.asset(
-                                        verticalCardImagesleft[index],
-                                        fit: BoxFit.cover,
-                                        width: ((MediaQuery.of(context)
-                                                        .size
-                                                        .width -
-                                                    25) /
-                                                2) -
-                                            25,
-                                      ),
-                                    ),
-                                  ],
-                                ),
                               ),
-                            ),
-                            Container(
-                              width:
-                                  (MediaQuery.of(context).size.width - 25) / 2,
-                              height: 100,
-                              child: Card(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(7.5),
-                                  side: BorderSide(
-                                    color: bordercolorsright[index],
-                                    width: 2,
+                              Container(
+                                width:
+                                    (MediaQuery.of(context).size.width - 25) /
+                                        2,
+                                height: 100,
+                                child: Card(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(7.5),
+                                    side: BorderSide(
+                                      color: bordercolorsright[index],
+                                      width: 2,
+                                    ),
+                                  ),
+                                  color: cardcolorsright[index],
+                                  elevation: 5,
+                                  child: Column(
+                                    children: [
+                                      SizedBox(
+                                        height: 2,
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          SizedBox(
+                                            width: 10,
+                                          ),
+                                          Flexible(
+                                            child: Text(
+                                              itemnameright[index],
+                                              style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 16,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                          ),
+                                          Icon(
+                                            Icons.navigate_next,
+                                            size: 27,
+                                            color: bordercolorsright[index],
+                                          ),
+                                        ],
+                                      ),
+                                      Flexible(
+                                        child: Image.asset(
+                                          verticalCardImagesright[index],
+                                          fit: BoxFit.cover,
+                                          width: ((MediaQuery.of(context)
+                                                          .size
+                                                          .width -
+                                                      25) /
+                                                  2) -
+                                              25,
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
-                                color: cardcolorsright[index],
-                                elevation: 5,
-                                child: Column(
-                                  children: [
-                                    SizedBox(
-                                      height: 2,
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        SizedBox(
-                                          width: 10,
-                                        ),
-                                        Flexible(
-                                          child: Text(
-                                            itemnameright[index],
-                                            style: TextStyle(
-                                                color: Colors.black,
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.bold),
-                                          ),
-                                        ),
-                                        Icon(
-                                          Icons.navigate_next,
-                                          size: 27,
-                                          color: bordercolorsright[index],
-                                        ),
-                                      ],
-                                    ),
-                                    Flexible(
-                                      child: Image.asset(
-                                        verticalCardImagesright[index],
-                                        fit: BoxFit.cover,
-                                        width: ((MediaQuery.of(context)
-                                                        .size
-                                                        .width -
-                                                    25) /
-                                                2) -
-                                            25,
-                                      ),
-                                    ),
-                                  ],
-                                ),
                               ),
-                            ),
-                          ],
-                        );
-                      },
+                            ],
+                          );
+                        },
+                      ),
                     ),
                   ),
                 ),

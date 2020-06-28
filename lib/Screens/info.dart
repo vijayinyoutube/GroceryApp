@@ -103,6 +103,7 @@ class _InfoPageState extends State<InfoPage> {
                           child: Card(
                             color: Colors.red,
                           ),
+                          
                         ),
                         Positioned(
                           top: -75,

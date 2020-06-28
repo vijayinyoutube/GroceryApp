@@ -94,7 +94,8 @@ class _OrangeState extends State<Orange> {
                         child: Center(
                           child: Text(
                             "\$ 1.5/Kg",
-                            style: GoogleFonts.aBeeZee(color: Colors.white, fontSize: 15),
+                            style: GoogleFonts.aBeeZee(
+                                color: Colors.white, fontSize: 15),
                           ),
                         ),
                       ),

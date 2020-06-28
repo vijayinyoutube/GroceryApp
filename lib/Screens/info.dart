@@ -93,54 +93,64 @@ class _InfoPageState extends State<InfoPage> {
                   GreenApple(),
                   PineApple(),
                   BlueBerry(),
-                  SizedBox(
-                    height: 25,
-                  ),
                 ],
               ),
             ),
             Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    height: 25,
-                  ),
-                  Container(
-                    width: double.infinity,
-                    height: 36.5,
-                    decoration: BoxDecoration(
-                      color: Colors.orange[100],
-                      borderRadius: BorderRadius.circular(5.5),
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Container(
+                    //   color: Colors.red,
+                    //   width: double.infinity,
+                    //   height: 175,
+                    //   child: Image.asset(
+                    //     "Images/offer.png",
+                    //     fit: BoxFit.fill,
+                    //     // height: 175,
+                    //     // width: 175,
+                    //   ),
+                    // ),
+                    SizedBox(
+                      height: 25,
                     ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          " 🍊 Fruits",
-                          style: GoogleFonts.aBeeZee(
-                            color: Colors.orange[800],
-                            fontSize: 25,
-                          ),
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Icon(
-                              Icons.filter_list,
+                    Container(
+                      width: double.infinity,
+                      height: 36.5,
+                      decoration: BoxDecoration(
+                        color: Colors.orange[100],
+                        borderRadius: BorderRadius.circular(5.5),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            " 🍊 Fruits",
+                            style: GoogleFonts.aBeeZee(
                               color: Colors.orange[800],
+                              fontSize: 25,
                             ),
-                            Text(
-                              " Filter ",
-                              style: GoogleFonts.aBeeZee(
-                                  color: Colors.orange[800], fontSize: 17.5),
-                            ),
-                          ],
-                        ),
-                      ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Icon(
+                                Icons.filter_list,
+                                color: Colors.orange[800],
+                              ),
+                              Text(
+                                " Filter ",
+                                style: GoogleFonts.aBeeZee(
+                                    color: Colors.orange[800], fontSize: 17.5),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ],

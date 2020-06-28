@@ -34,76 +34,78 @@ class _GrapeState extends State<Grape> {
                 padding: EdgeInsets.symmetric(
                   horizontal: 10,
                 ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      height: 75,
-                    ),
-                    Container(
-                      child: Text(
-                        "Grapes",
-                        style: GoogleFonts.aBeeZee(
-                            color: Colors.pink[800],
-                            fontSize: 23,
-                            fontWeight: FontWeight.bold),
+                child: SingleChildScrollView(
+                                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        height: 75,
                       ),
-                    ),
-                    SizedBox(
-                      height: 2.5,
-                    ),
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.star,
-                          size: 15,
-                          color: Colors.pink[800],
+                      Container(
+                        child: Text(
+                          "Grapes",
+                          style: GoogleFonts.aBeeZee(
+                              color: Colors.pink[800],
+                              fontSize: 23,
+                              fontWeight: FontWeight.bold),
                         ),
-                        Icon(
-                          Icons.star,
-                          size: 15,
-                          color: Colors.pink[800],
-                        ),
-                        Icon(
-                          Icons.star,
-                          size: 15,
-                          color: Colors.pink[800],
-                        ),
-                        Icon(
-                          Icons.star,
-                          size: 15,
-                          color: Colors.pink[800],
-                        ),
-                        Icon(
-                          Icons.star,
-                          size: 15,
-                          color: Colors.pink[800],
-                        ),
-                      ],
-                    ),
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: Container(
-                        width: 75,
-                        height: 25,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(25),
-                          color: Colors.pink[800],
-                        ),
-                        child: Center(
-                          child: Text(
-                            "\$ 0.8/Kg",
-                            style: GoogleFonts.aBeeZee(color: Colors.white, fontSize: 15),
+                      ),
+                      SizedBox(
+                        height: 2.5,
+                      ),
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.star,
+                            size: 15,
+                            color: Colors.pink[800],
+                          ),
+                          Icon(
+                            Icons.star,
+                            size: 15,
+                            color: Colors.pink[800],
+                          ),
+                          Icon(
+                            Icons.star,
+                            size: 15,
+                            color: Colors.pink[800],
+                          ),
+                          Icon(
+                            Icons.star,
+                            size: 15,
+                            color: Colors.pink[800],
+                          ),
+                          Icon(
+                            Icons.star,
+                            size: 15,
+                            color: Colors.pink[800],
+                          ),
+                        ],
+                      ),
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: Container(
+                          width: 75,
+                          height: 25,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(25),
+                            color: Colors.pink[800],
+                          ),
+                          child: Center(
+                            child: Text(
+                              "\$ 0.8/Kg",
+                              style: GoogleFonts.aBeeZee(color: Colors.white, fontSize: 15),
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                    Icon(
-                      Icons.favorite_border,
-                      color: Colors.pink[800],
-                    ),
-                  ],
+                      Icon(
+                        Icons.favorite_border,
+                        color: Colors.pink[800],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

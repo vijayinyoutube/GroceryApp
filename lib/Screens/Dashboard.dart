@@ -231,9 +231,7 @@ class _DashboardPageState extends State<DashboardPage> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => InformationPage(
-                          itemSelected: page.toString(),
-                        ),
+                        builder: (context) => InfoPage(),
                       ),
                     );
                   },

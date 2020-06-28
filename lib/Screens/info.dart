@@ -12,6 +12,8 @@ class InfoPage extends StatefulWidget {
   _InfoPageState createState() => _InfoPageState();
 }
 
+int selectedIndex = 0;
+
 class _InfoPageState extends State<InfoPage> {
   @override
   Widget build(BuildContext context) {
@@ -84,16 +86,24 @@ class _InfoPageState extends State<InfoPage> {
                 ],
               ),
             ),
-            Expanded(
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  Orange(),
-                  Grape(),
-                  GreenApple(),
-                  PineApple(),
-                  BlueBerry(),
-                ],
+            Container(
+              height: 300,
+              child: Expanded(
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    Orange(),
+                    Grape(),
+                    GreenApple(),
+                    PineApple(),
+                    BlueBerry(),
+                    Orange(),
+                    Grape(),
+                    GreenApple(),
+                    PineApple(),
+                    BlueBerry(),
+                  ],
+                ),
               ),
             ),
             Expanded(
@@ -101,52 +111,66 @@ class _InfoPageState extends State<InfoPage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Container(
-                    //   color: Colors.red,
-                    //   width: double.infinity,
-                    //   height: 175,
-                    //   child: Image.asset(
-                    //     "Images/offer.png",
-                    //     fit: BoxFit.fill,
-                    //     // height: 175,
-                    //     // width: 175,
-                    //   ),
-                    // ),
-                    SizedBox(
-                      height: 25,
-                    ),
                     Container(
-                      width: double.infinity,
-                      height: 36.5,
+                      height: 2.5,
                       decoration: BoxDecoration(
-                        color: Colors.orange[100],
-                        borderRadius: BorderRadius.circular(5.5),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            " 🍊 Fruits",
-                            style: GoogleFonts.aBeeZee(
-                              color: Colors.orange[800],
-                              fontSize: 25,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.orange,
+                            blurRadius: 25.0,
+                            spreadRadius: 3.5,
+                            offset: Offset(
+                              15.0,
+                              15.0,
                             ),
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          )
+                        ],
+                        gradient: LinearGradient(
+                          colors: <Color>[Color(0xFF2508FF), Color(0xFFFF1000)],
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.store,
+                          size: 35,
+                          color: Colors.redAccent,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Text(
+                          "Nearby Shops",
+                          style: GoogleFonts.aBeeZee(
+                              color: Colors.redAccent,
+                              fontSize: 23,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    SingleChildScrollView(
+                      child: Container(
+                        height: 85,
+                        child: Expanded(
+                          child: ListView(
+                            scrollDirection: Axis.horizontal,
                             children: [
-                              Icon(
-                                Icons.filter_list,
-                                color: Colors.orange[800],
-                              ),
-                              Text(
-                                " Filter ",
-                                style: GoogleFonts.aBeeZee(
-                                    color: Colors.orange[800], fontSize: 17.5),
-                              ),
+                              shop1(),
+                              shop1(),
+                              shop1(),
+                              shop1(),
+                              shop1(),
+                              shop1(),
                             ],
                           ),
-                        ],
+                        ),
                       ),
                     ),
                   ],
@@ -156,6 +180,64 @@ class _InfoPageState extends State<InfoPage> {
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        elevation: 0,
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite),
+            title: Text('Favourites'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.category),
+            title: Text('Category'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            title: Text('Profile'),
+          ),
+        ],
+        currentIndex: selectedIndex,
+        fixedColor: Colors.orange,
+        onTap: onItemTapped,
+      ),
     );
   }
+
+  void onItemTapped(int index) {
+    setState(() {
+      selectedIndex = index;
+    });
+  }
+}
+
+Widget shop1() {
+  return Container(
+    width: 300,
+    child: Card(
+      color: Colors.green[50],
+      elevation: 3.5,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(7.5),
+      ),
+      child: Row(
+        children: [
+          SizedBox(
+            width: 12.5,
+          ),
+          Container(
+            width: 55,
+            height: 55,
+            decoration: BoxDecoration(
+              color: Colors.pink[50],
+              borderRadius: BorderRadius.circular(7.5),
+            ),
+          ),
+          SizedBox(
+            width: 12.5,
+          ),
+          Text("hai")
+        ],
+      ),
+    ),
+  );
 }

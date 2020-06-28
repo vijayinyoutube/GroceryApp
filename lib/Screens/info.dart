@@ -4,6 +4,7 @@ import 'package:gradient_text/gradient_text.dart';
 import 'package:youtube/Widgets/Grape.dart';
 import 'package:youtube/Widgets/GreenApple.dart';
 import 'package:youtube/Widgets/Orange.dart';
+import 'package:youtube/Widgets/blueberry.dart';
 import 'package:youtube/Widgets/pineapple.dart';
 
 class InfoPage extends StatefulWidget {
@@ -91,32 +92,7 @@ class _InfoPageState extends State<InfoPage> {
                   Grape(),
                   GreenApple(),
                   PineApple(),
-                  Container(
-                    margin: EdgeInsets.only(top: 75),
-                    child: Stack(
-                      alignment: Alignment.topCenter,
-                      overflow: Overflow.visible,
-                      children: [
-                        Container(
-                          width: 200,
-                          height: 200,
-                          child: Card(
-                            color: Colors.red,
-                          ),
-                          
-                        ),
-                        Positioned(
-                          top: -75,
-                          child: Image.asset(
-                            "Images/orange.png",
-                            fit: BoxFit.contain,
-                            height: 175,
-                            width: 175,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                  BlueBerry(),
                 ],
               ),
             ),

@@ -163,11 +163,11 @@ class _InfoPageState extends State<InfoPage> {
                             scrollDirection: Axis.horizontal,
                             children: [
                               shop1(),
+                              shop2(),
+                              shop3(),
                               shop1(),
-                              shop1(),
-                              shop1(),
-                              shop1(),
-                              shop1(),
+                              shop2(),
+                              shop3(),
                             ],
                           ),
                         ),
@@ -214,7 +214,7 @@ Widget shop1() {
   return Container(
     width: 300,
     child: Card(
-      color: Colors.green[50],
+      //color: Colors.green[50],
       elevation: 3.5,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(7.5),
@@ -225,17 +225,156 @@ Widget shop1() {
             width: 12.5,
           ),
           Container(
-            width: 55,
-            height: 55,
+            width: 75,
+            height: 65,
             decoration: BoxDecoration(
-              color: Colors.pink[50],
+              //  color: Colors.pink[50],
               borderRadius: BorderRadius.circular(7.5),
+            ),
+            child: Image.asset(
+              "Images/shop1.jpg",
+              //  fit: BoxFit.cover,
+              width: 25,
+              height: 25,
             ),
           ),
           SizedBox(
             width: 12.5,
           ),
-          Text("hai")
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Fruits Shop",
+                style: GoogleFonts.aBeeZee(
+                    color: Colors.orange[800], fontSize: 17.5),
+              ),
+              Text(
+                "Mumbai, india",
+                style: GoogleFonts.aBeeZee(
+                    color: Colors.orange[800], fontSize: 12),
+              ),
+              Text(
+                "Time : 9am-6pm",
+                style: GoogleFonts.aBeeZee(
+                    color: Colors.orange[800], fontSize: 12),
+              ),
+            ],
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+Widget shop2() {
+  return Container(
+    width: 300,
+    child: Card(
+      //color: Colors.green[50],
+      elevation: 3.5,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(7.5),
+      ),
+      child: Row(
+        children: [
+          SizedBox(
+            width: 12.5,
+          ),
+          Container(
+            width: 75,
+            height: 65,
+            decoration: BoxDecoration(
+              //  color: Colors.pink[50],
+              borderRadius: BorderRadius.circular(7.5),
+            ),
+            child: Image.asset(
+              "Images/shop2.jpg",
+              //  fit: BoxFit.cover,
+              width: 25,
+              height: 25,
+            ),
+          ),
+          SizedBox(
+            width: 12.5,
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Snacks Shop",
+                style: GoogleFonts.aBeeZee(
+                    color: Colors.orange[800], fontSize: 17.5),
+              ),
+              Text(
+                "Delhi, india",
+                style: GoogleFonts.aBeeZee(
+                    color: Colors.orange[800], fontSize: 12),
+              ),
+              Text(
+                "Time : 3pm-6pm",
+                style: GoogleFonts.aBeeZee(
+                    color: Colors.orange[800], fontSize: 12),
+              ),
+            ],
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+Widget shop3() {
+  return Container(
+    width: 300,
+    child: Card(
+      //color: Colors.green[50],
+      elevation: 3.5,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(7.5),
+      ),
+      child: Row(
+        children: [
+          SizedBox(
+            width: 12.5,
+          ),
+          Container(
+            width: 75,
+            height: 65,
+            decoration: BoxDecoration(
+              //  color: Colors.pink[50],
+              borderRadius: BorderRadius.circular(7.5),
+            ),
+            child: Image.asset(
+              "Images/shop3.png",
+              //  fit: BoxFit.cover,
+              width: 25,
+              height: 25,
+            ),
+          ),
+          SizedBox(
+            width: 12.5,
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Vegetables Shop",
+                style: GoogleFonts.aBeeZee(
+                    color: Colors.orange[800], fontSize: 17.5),
+              ),
+              Text(
+                "Kolkata, india",
+                style: GoogleFonts.aBeeZee(
+                    color: Colors.orange[800], fontSize: 12),
+              ),
+              Text(
+                "Time : 10pm-6pm",
+                style: GoogleFonts.aBeeZee(
+                    color: Colors.orange[800], fontSize: 12),
+              ),
+            ],
+          ),
         ],
       ),
     ),

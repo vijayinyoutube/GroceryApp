@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Grape extends StatefulWidget {
-  Grape({Key key}) : super(key: key);
+class BlueBerry extends StatefulWidget {
+  BlueBerry({Key key}) : super(key: key);
 
   @override
-  _GrapeState createState() => _GrapeState();
+  _BlueBerryState createState() => _BlueBerryState();
 }
 
-class _GrapeState extends State<Grape> {
+class _BlueBerryState extends State<BlueBerry> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,12 +21,12 @@ class _GrapeState extends State<Grape> {
             width: 200,
             height: 200,
             child: Card(
-              color: Colors.pink[200],
+              color: Colors.indigo[200],
               elevation: 10,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(7.5),
                 side: BorderSide(
-                  color: Colors.pink[800],
+                  color: Colors.indigo[800],
                   width: 3.5,
                 ),
               ),
@@ -44,9 +44,9 @@ class _GrapeState extends State<Grape> {
                       ),
                       Container(
                         child: Text(
-                          "Grapes",
+                          "Blue Berry",
                           style: GoogleFonts.aBeeZee(
-                              color: Colors.pink[800],
+                              color: Colors.indigo[800],
                               fontSize: 23,
                               fontWeight: FontWeight.bold),
                         ),
@@ -59,27 +59,27 @@ class _GrapeState extends State<Grape> {
                           Icon(
                             Icons.star,
                             size: 15,
-                            color: Colors.pink[800],
+                            color: Colors.indigo[800],
                           ),
                           Icon(
                             Icons.star,
                             size: 15,
-                            color: Colors.pink[800],
+                            color: Colors.indigo[800],
                           ),
                           Icon(
                             Icons.star,
                             size: 15,
-                            color: Colors.pink[800],
+                            color: Colors.indigo[800],
                           ),
                           Icon(
                             Icons.star,
                             size: 15,
-                            color: Colors.pink[800],
+                            color: Colors.indigo[800],
                           ),
                           Icon(
                             Icons.star,
                             size: 15,
-                            color: Colors.pink[800],
+                            color: Colors.indigo[800],
                           ),
                         ],
                       ),
@@ -90,19 +90,20 @@ class _GrapeState extends State<Grape> {
                           height: 25,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25),
-                            color: Colors.pink[800],
+                            color: Colors.indigo[800],
                           ),
                           child: Center(
                             child: Text(
-                              "\$ 0.8/Kg",
-                              style: GoogleFonts.aBeeZee(color: Colors.white, fontSize: 15),
+                              "\$ 2.3/Kg",
+                              style: GoogleFonts.aBeeZee(
+                                  color: Colors.white, fontSize: 15),
                             ),
                           ),
                         ),
                       ),
                       Icon(
-                        Icons.favorite_border,
-                        color: Colors.pink[800],
+                        Icons.favorite,
+                        color: Colors.indigo[800],
                       ),
                     ],
                   ),
@@ -113,7 +114,7 @@ class _GrapeState extends State<Grape> {
           Positioned(
             top: -75,
             child: Image.asset(
-              "Images/grape1.png",
+              "Images/blueberry.png",
               fit: BoxFit.contain,
               height: 175,
               width: 175,

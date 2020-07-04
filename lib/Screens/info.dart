@@ -4,12 +4,15 @@ import 'package:gradient_text/gradient_text.dart';
 import 'package:youtube/Widgets/Grape.dart';
 import 'package:youtube/Widgets/GreenApple.dart';
 import 'package:youtube/Widgets/Orange.dart';
+import 'package:youtube/Widgets/blueberry.dart';
 import 'package:youtube/Widgets/pineapple.dart';
 
 class InfoPage extends StatefulWidget {
   @override
   _InfoPageState createState() => _InfoPageState();
 }
+
+int selectedIndex = 0;
 
 class _InfoPageState extends State<InfoPage> {
   @override
@@ -83,46 +86,297 @@ class _InfoPageState extends State<InfoPage> {
                 ],
               ),
             ),
+            Container(
+              height: 300,
+              child: Expanded(
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    Orange(),
+                    Grape(),
+                    GreenApple(),
+                    PineApple(),
+                    BlueBerry(),
+                    Orange(),
+                    Grape(),
+                    GreenApple(),
+                    PineApple(),
+                    BlueBerry(),
+                  ],
+                ),
+              ),
+            ),
             Expanded(
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  Orange(),
-                  Grape(),
-                  GreenApple(),
-                  PineApple(),
-                  Container(
-                    margin: EdgeInsets.only(top: 75),
-                    child: Stack(
-                      alignment: Alignment.topCenter,
-                      overflow: Overflow.visible,
-                      children: [
-                        Container(
-                          width: 200,
-                          height: 200,
-                          child: Card(
-                            color: Colors.red,
-                          ),
-                          
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      height: 2.5,
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.orange,
+                            blurRadius: 25.0,
+                            spreadRadius: 3.5,
+                            offset: Offset(
+                              15.0,
+                              15.0,
+                            ),
+                          )
+                        ],
+                        gradient: LinearGradient(
+                          colors: <Color>[Color(0xFF2508FF), Color(0xFFFF1000)],
                         ),
-                        Positioned(
-                          top: -75,
-                          child: Image.asset(
-                            "Images/orange.png",
-                            fit: BoxFit.contain,
-                            height: 175,
-                            width: 175,
-                          ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.store,
+                          size: 35,
+                          color: Colors.redAccent,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Text(
+                          "Nearby Shops",
+                          style: GoogleFonts.aBeeZee(
+                              color: Colors.redAccent,
+                              fontSize: 23,
+                              fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),
-                  ),
-                ],
+                    SizedBox(
+                      height: 5,
+                    ),
+                    SingleChildScrollView(
+                      child: Container(
+                        height: 85,
+                        child: Expanded(
+                          child: ListView(
+                            scrollDirection: Axis.horizontal,
+                            children: [
+                              shop1(),
+                              shop2(),
+                              shop3(),
+                              shop1(),
+                              shop2(),
+                              shop3(),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        elevation: 0,
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite),
+            title: Text('Favourites'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.category),
+            title: Text('Category'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            title: Text('Profile'),
+          ),
+        ],
+        currentIndex: selectedIndex,
+        fixedColor: Colors.orange,
+        onTap: onItemTapped,
+      ),
     );
   }
+
+  void onItemTapped(int index) {
+    setState(() {
+      selectedIndex = index;
+    });
+  }
+}
+
+Widget shop1() {
+  return Container(
+    width: 300,
+    child: Card(
+      //color: Colors.green[50],
+      elevation: 3.5,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(7.5),
+      ),
+      child: Row(
+        children: [
+          SizedBox(
+            width: 12.5,
+          ),
+          Container(
+            width: 75,
+            height: 65,
+            decoration: BoxDecoration(
+              //  color: Colors.pink[50],
+              borderRadius: BorderRadius.circular(7.5),
+            ),
+            child: Image.asset(
+              "Images/shop1.jpg",
+              //  fit: BoxFit.cover,
+              width: 25,
+              height: 25,
+            ),
+          ),
+          SizedBox(
+            width: 12.5,
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Fruits Shop",
+                style: GoogleFonts.aBeeZee(
+                    color: Colors.orange[800], fontSize: 17.5),
+              ),
+              Text(
+                "Mumbai, india",
+                style: GoogleFonts.aBeeZee(
+                    color: Colors.orange[800], fontSize: 12),
+              ),
+              Text(
+                "Time : 9am-6pm",
+                style: GoogleFonts.aBeeZee(
+                    color: Colors.orange[800], fontSize: 12),
+              ),
+            ],
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+Widget shop2() {
+  return Container(
+    width: 300,
+    child: Card(
+      //color: Colors.green[50],
+      elevation: 3.5,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(7.5),
+      ),
+      child: Row(
+        children: [
+          SizedBox(
+            width: 12.5,
+          ),
+          Container(
+            width: 75,
+            height: 65,
+            decoration: BoxDecoration(
+              //  color: Colors.pink[50],
+              borderRadius: BorderRadius.circular(7.5),
+            ),
+            child: Image.asset(
+              "Images/shop2.jpg",
+              //  fit: BoxFit.cover,
+              width: 25,
+              height: 25,
+            ),
+          ),
+          SizedBox(
+            width: 12.5,
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Snacks Shop",
+                style: GoogleFonts.aBeeZee(
+                    color: Colors.orange[800], fontSize: 17.5),
+              ),
+              Text(
+                "Delhi, india",
+                style: GoogleFonts.aBeeZee(
+                    color: Colors.orange[800], fontSize: 12),
+              ),
+              Text(
+                "Time : 3pm-6pm",
+                style: GoogleFonts.aBeeZee(
+                    color: Colors.orange[800], fontSize: 12),
+              ),
+            ],
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+Widget shop3() {
+  return Container(
+    width: 300,
+    child: Card(
+      //color: Colors.green[50],
+      elevation: 3.5,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(7.5),
+      ),
+      child: Row(
+        children: [
+          SizedBox(
+            width: 12.5,
+          ),
+          Container(
+            width: 75,
+            height: 65,
+            decoration: BoxDecoration(
+              //  color: Colors.pink[50],
+              borderRadius: BorderRadius.circular(7.5),
+            ),
+            child: Image.asset(
+              "Images/shop3.png",
+              //  fit: BoxFit.cover,
+              width: 25,
+              height: 25,
+            ),
+          ),
+          SizedBox(
+            width: 12.5,
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Vegetables Shop",
+                style: GoogleFonts.aBeeZee(
+                    color: Colors.orange[800], fontSize: 17.5),
+              ),
+              Text(
+                "Kolkata, india",
+                style: GoogleFonts.aBeeZee(
+                    color: Colors.orange[800], fontSize: 12),
+              ),
+              Text(
+                "Time : 10pm-6pm",
+                style: GoogleFonts.aBeeZee(
+                    color: Colors.orange[800], fontSize: 12),
+              ),
+            ],
+          ),
+        ],
+      ),
+    ),
+  );
 }

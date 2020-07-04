@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(),
-      home: CarouselPage(),
+      home: InfoPage(),
       routes: {
         "/DashboardPage": (_) => new DashboardPage(),
       },

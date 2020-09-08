@@ -24,6 +24,10 @@ Check out the video tutorial for this app
 
 Visit my Channel for more : :point_right: [vijaycreations](https://www.youtube.com/channel/UCBC_Z7jla1GSITcqLKAtPxQ)
 
+
+
+<img src="https://user-images.githubusercontent.com/58719230/92444577-b9262d80-f1d0-11ea-8a44-789c8d4cdc72.png">
+
 <image src="https://user-images.githubusercontent.com/58719230/83389079-38a3a400-a40d-11ea-8c0a-ae28f2a867ea.gif" width="300" height="450"> <image src="https://user-images.githubusercontent.com/58719230/85201765-93029700-b31f-11ea-99db-a937e179e4c5.png" width="300" height="450"> <image src="https://user-images.githubusercontent.com/58719230/86525419-81cf9380-bea4-11ea-8db3-125971ccbdf2.png" width="300" height="450"> 
   
 ## License
